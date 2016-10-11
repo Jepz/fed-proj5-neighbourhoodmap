@@ -1,0 +1,1 @@
+Ref click event databind knockout - http://knockoutjs.com/documentation/click-binding.html

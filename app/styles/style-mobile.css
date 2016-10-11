@@ -1,0 +1,269 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video, input {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+h1{
+  font-size: 20px;
+  text-align: center;
+}
+
+#nav{
+  background: #fff;
+  height: 100%;
+  line-height: 35px;
+  text-align: left;
+
+}
+
+
+.listItem{
+  list-style-type: none;
+  font-family: sans-serif;
+  font-size: 14px;    
+  background-color: white;
+  border-radius: 10px;
+  padding-left:20%;
+  margin: 10px;
+}
+
+label{
+  display: inline-block;
+  text-align: left;
+  
+}
+
+input{
+  padding: 0  10px  0 10px;
+  list-style-type: none;
+  font-family: sans-serif;   
+  background-color: #E3F2FD;
+  margin: 0px;
+  height: 40px;
+  width: 200px;
+  border-radius: 10px;
+  margin-left: 10px;
+
+}
+
+
+.listItem:hover{
+  background-color: #E3F2FD;
+}
+
+.info-window{
+  font-size: 15px;
+  font-family: Roboto;
+}
+.info-window p{
+  margin-top: 5px;
+}
+
+input[type="text"]{
+  font-size: 22px;
+  font-family: Roboto;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 992px) {
+
+  h1,label{
+    background-color: white;
+    padding: 10px;
+    border-bottom-right-radius: 5px;
+  }
+
+
+  .listItem {
+    font-size: 12px;
+  }
+
+  input[type="text"]{
+    font-size: 12px;
+    font-family: Roboto;
+    font-weight: bold;
+  }
+
+  #map {
+    height: 100%;
+    width: 100%;
+  }
+
+  #container{
+    z-index:100;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    width:350px;
+    height: 100%;
+
+  }
+
+  #nav{
+    z-index:100;
+    position: absolute;
+    top:100px;
+    left: 0px;
+    margin: 0px;
+    width: 200px;
+    height: auto;
+    display: nones;
+    border-bottom-right-radius: 5px;
+  }
+}
+#errorMessage{
+  position: absolute;
+
+  z-index: 100;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 20px;
+
+}
+.present{
+  left:50%;
+  top: 50%;
+}
+.hide{
+  left:-1000px;
+  top:-100px;
+}
+
+@media screen and (min-width: 993px) {
+
+  label{
+    margin-left: 10px;
+  }
+
+  .listItem {
+      font-size: 14px; 
+  }
+
+  input[type="text"]{
+    font-size: 12px;
+    font-family: Roboto;
+    font-weight: bold;
+  }
+
+#map {
+  bottom:0px;
+  height: 100%;
+  left: 362px;
+  position: absolute;
+  right: 0px;
+  }
+
+  #container{
+  width:350px;
+  height: 100%;
+
+  }
+
+  #nav{
+
+    margin: 0px;
+    height: auto;
+    display: nones;
+    width: 100%;
+
+  }
+}
