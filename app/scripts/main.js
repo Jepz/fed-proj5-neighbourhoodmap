@@ -8,6 +8,11 @@
     this.location = data.location;
     this.marker = null;
   };
+  //declared Global function for Google
+  function errorGoogle() {
+    'use strict';
+    alert('Having problems reaching Google, might the connection be down?');
+  }; 
 
   function initMap() {
         'use strict';
@@ -22,25 +27,22 @@
         ko.applyBindings(new ViewModel());
 
         //If there is a problem with reaching google, this function is triggered from the index file.
-        function errorGoogle() {
-          'use strict';
-          alert('Having problems reaching Google, might the connection be down?');
-        }    
+
   }
- 
+
 var ViewModel = function () {
   'use strict';
   var self = this;
   infoWindow = new google.maps.InfoWindow();
   // Empty array for adding all locations
   self.locationCollection = [];
-  // 
+  //
   self.filteredLocations = ko.observableArray();
-  
+
   //REF: click event databind knockout - http://knockoutjs.com/documentation/click-binding.html
   self.search = ko.observable("");
 
-  // To load the locations in the beginning. 
+  // To load the locations in the beginning.
   locations.forEach(function (location) {
     self.locationCollection.push(new Location(location));
   });
@@ -54,7 +56,7 @@ var ViewModel = function () {
       animation: google.maps.Animation.DROP
     });
 
-    // Add click-listner to the marker, 
+    // Add click-listner to the marker,
     location.marker.addListener('click', toggleMarker);
 
     //function for handling the click event
@@ -84,12 +86,12 @@ var ViewModel = function () {
   self.clickInList = function (location, marker) {
     google.maps.event.trigger(location.marker, 'click');
   };
- 
+
     // Pushing out the locations in the data.
   self.locationCollection.forEach(function (location) {
       self.filteredLocations.push(location);
   });
-  
+
   // Simple filter function
   self.filterBasedOnSearch = function () {
     //When the user starts to add characters, we clear the location list.
@@ -97,16 +99,16 @@ var ViewModel = function () {
     self.locationCollection.forEach(function (location) {
         //Remove the markers, we are doing it inside the for each because here location is available.
         //REF: https://developers.google.com/maps/documentation/javascript/reference#Marker
-        //REF: https://efwjames.com/2015/11/google-maps-marker-toggle-code-example/ <-- just to see how to use setVisible 
+        //REF: https://efwjames.com/2015/11/google-maps-marker-toggle-code-example/ <-- just to see how to use setVisible
         location.marker.setVisible(false);
 
         //Making a comparison between what the user has added and with my list.
-          //Change both values to lowercases to make an easier match. 
+          //Change both values to lowercases to make an easier match.
         // The zero in the end is show the full list
         if (location.title.toLowerCase().indexOf(self.search().toLowerCase()) == 0 ) {
             location.marker.setVisible(false);
             self.filteredLocations.push(location);
-        } 
+        }
     });
 
     self.filteredLocations().forEach(function (location) {
@@ -132,7 +134,7 @@ var yelp = function(title, latitude, longitude, marker, adress) {
            return (Math.floor(Math.random() * 1e12).toString());
       }
 
-    // Following Yelp documentation https://www.yelp.com/developers/documentation/v2/authenticationbelow 
+    // Following Yelp documentation https://www.yelp.com/developers/documentation/v2/authenticationbelow
     // to authenticate towards Yelp.
 
     var parameters = {
@@ -148,7 +150,7 @@ var yelp = function(title, latitude, longitude, marker, adress) {
       limit: 1,
       location: adress,
       cll: latitude + ',' + longitude
-      
+
     };
 
     var yelpConsumerSecret = '_kaJ3jISxoLvp1Wx3K553AW-WHM', yelpTokenSecret = 'M4RnfNHqi7zyQwFD-jCnAcuWXUQ';
@@ -185,7 +187,3 @@ var yelp = function(title, latitude, longitude, marker, adress) {
 
     $.ajax(settings);
 };
-
-
-
-
