@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="styles/style-mobile.css">
+	 <meta name=viewport content="width=device-width, initial-scale=1">
 	<style type="text/css">
 
    .rating-image {
@@ -17,7 +18,7 @@
 
     <span id="errorMessage" class="hide">Sorry, something went wrong on our side, please try again later.</span>
     <h1>STOCKHOLM BEER WALK</h1>
-    <label>Search: 
+    <label>Search:
    <input type="text" id="userInput" data-bind="textInput: search, event: {keyup: filterBasedOnSearch}"></label>
     <div id="nav">
          <ul class="list" data-bind="foreach: filteredLocations">
