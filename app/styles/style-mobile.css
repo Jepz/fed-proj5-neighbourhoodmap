@@ -1,287 +1,273 @@
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video, input {
-    margin:0;
-    padding:0;
-    border:0;
-    outline:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video,input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
 }
 
 body {
-    line-height:1;
+    line-height: 1;
 }
 
-article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section {
-    display:block;
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    display: block;
 }
 
 nav ul {
-    list-style:none;
+    list-style: none;
 }
 
-blockquote, q {
-    quotes:none;
+blockquote,q {
+    quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content:'';
-    content:none;
+blockquote:before,blockquote:after,q:before,q:after {
+    content: '';
+    content: none;
 }
 
 a {
-    margin:0;
-    padding:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
 }
 
 /* change colours to suit your needs */
 ins {
-    background-color:#ff9;
-    color:#000;
-    text-decoration:none;
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
 }
 
 /* change colours to suit your needs */
 mark {
-    background-color:#ff9;
-    color:#000;
-    font-style:italic;
-    font-weight:bold;
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: 700;
 }
 
 del {
     text-decoration: line-through;
 }
 
-abbr[title], dfn[title] {
-    border-bottom:1px dotted;
-    cursor:help;
+abbr[title],dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
 }
 
 table {
-    border-collapse:collapse;
-    border-spacing:0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 hr {
-    display:block;
-    height:1px;
-    border:0;
-    border-top:1px solid #cccccc;
-    margin:1em 0;
-    padding:0;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
 }
 
-input, select {
-    vertical-align:middle;
+input,select {
+    vertical-align: middle;
 }
 
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-h1{
-  font-size: 20px;
-  text-align: center;
+html,body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.nav{
-  background: #fff;
-  height: 100%;
-  line-height: 35px;
-  text-align: left;
-
+h1 {
+    font-size: 20px;
+    text-align: center;
 }
 
-
-.listItem{
-  list-style-type: none;
-  font-family: sans-serif;
-  font-size: 14px;
-  background-color: white;
-  border-radius: 10px;
-  padding-left:20%;
-  margin: 10px;
-}
-form{
-
+.nav {
+    background: #fff;
+    height: 100%;
+    line-height: 35px;
+    text-align: left;
 }
 
-label{
-  display: inline-block;
-  text-align: left;
-  float:left;
+.listItem {
+    list-style-type: none;
+    font-family: sans-serif;
+    font-size: 14px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding-left: 20%;
+    margin: 10px;
+}
+
+form {
+}
+
+label {
+    display: inline-block;
+    text-align: left;
+    float: left;
 }
 
 input[type="text"] {
-  padding: 0  10px  0 10px;
-  list-style-type: none;
-  font-family: sans-serif;
-  background-color: #E3F2FD;
-  margin: 0px;
-  float:right;
-  height: 40px;
-  width: 200px;
-  margin-left: 10px;
-  font-size: 22px;
-  font-family: Roboto;
-  font-weight: bold;
+    padding: 0 10px;
+    list-style-type: none;
+    font-family: sans-serif;
+    background-color: #E3F2FD;
+    margin: 0;
+    float: right;
+    height: 40px;
+    width: 200px;
+    margin-left: 10px;
+    font-size: 22px;
+    font-family: Roboto;
+    font-weight: 700;
 }
 
-button{
-  background-color: black;
-width: 10%;
-height: 10%;
+button {
+    background-color: #000;
+    width: 10%;
+    height: 10%;
 }
 
-.listItem:hover{
-  background-color: #E3F2FD;
+.listItem:hover {
+    background-color: #E3F2FD;
 }
 
-.info-window{
-  font-size: 15px;
-  font-family: Roboto;
-}
-.info-window p{
-  margin-top: 5px;
+.info-window {
+    font-size: 15px;
+    font-family: Roboto;
 }
 
-.errorMessage{
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: 20px;
+.info-window p {
+    margin-top: 5px;
+}
+
+.errorMessage {
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 20px;
 }
 
 @media screen and (max-width: 760px) {
+    h1,label {
+        background-color: #fff;
+        padding: 10px;
+    }
 
-  h1,label{
-    background-color: white;
-    padding: 10px;
-  }
-  .listItem {
-    font-size: 12px;
-  }
+    .listItem {
+        font-size: 12px;
+    }
 
-  input[type="text"]{
-    font-size: 12px;
-    font-family: Roboto;
-    font-weight: bold;
-  }
-  input[type="checkbox"]{
-    list-style-type: none;
-    font-family: Roboto;
-    background-color: #E3F2FD;
-    margin: 4px 0 4px 0;
-    height: 20px;
-    width: 100%;
-    float:left;
-  }
-  label.checkbox{
-    float:left;
-    width: 15%;
-    font-size: 12px;
-  }
+    input[type="text"] {
+        font-size: 12px;
+        font-family: Roboto;
+        font-weight: 700;
+    }
 
-  .map {
-    height: 100%;
-    width: 100%;
-  }
+    input[type="checkbox"] {
+        list-style-type: none;
+        font-family: Roboto;
+        background-color: #E3F2FD;
+        margin: 4px 0;
+        height: 20px;
+        width: 100%;
+        float: left;
+    }
 
-  .container{
-    z-index:100;
-    position: absolute;
-    top:0px;
-    left: 0px;
-    width:100%;
-    height: auto;
-  }
+    label.checkbox {
+        float: left;
+        width: 15%;
+        font-size: 12px;
+    }
 
-  .nav{
-    z-index:100;
-    position: absolute;
-    top:100px;
-    left: 0px;
-    margin: 0px;
-    width: 200px;
-    height: auto;
-    border-bottom-right-radius: 5px;
-    opacity: 80;
-  }
-}
-.errorMessage{
-  top:50%;
-  position: absolute;
-  z-index: 100;
+    .map {
+        height: 100%;
+        width: 100%;
+    }
+
+    .container {
+        z-index: 100;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .nav {
+        z-index: 100;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        margin: 0;
+        width: 200px;
+        height: auto;
+        border-bottom-right-radius: 5px;
+        opacity: 80;
+    }
 }
 
+.errorMessage {
+    top: 50%;
+    position: absolute;
+    z-index: 100;
+}
 
-.present{
-  left:50%;
-  top: 50%;
+.present {
+    left: 50%;
+    top: 50%;
 }
 
 @media screen and (min-width: 761px) {
+    label {
+        margin-left: 10px;
+    }
 
-  label{
-    margin-left: 10px;
-  }
+    .listItem {
+        font-size: 14px;
+    }
 
-  .listItem {
-      font-size: 14px;
-  }
+    input[type="text"] {
+        font-size: 12px;
+        font-family: Roboto;
+        font-weight: 700;
+    }
 
+    input[type="checkbox"],label.checkbox {
+        display: none;
+    }
 
-  input[type="text"]{
-    font-size: 12px;
-    font-family: Roboto;
-    font-weight: bold;
-  }
-  input[type="checkbox"] {
-    display: none;
-  }
+    .map {
+        bottom: 0;
+        height: 100%;
+        left: 362px;
+        position: absolute;
+        right: 0;
+    }
 
-.map {
-  bottom:0px;
-  height: 100%;
-  left: 362px;
-  position: absolute;
-  right: 0px;
-  }
+    .container {
+        width: 350px;
+        height: 100%;
+    }
 
-  .container{
-  width:350px;
-  height: 100%;
+    .nav {
+        margin: 0;
+        height: auto;
+        width: 100%;
+    }
 
-  }
-
-  .nav{
-
-    margin: 0px;
-    height: auto;
-    width: 100%;
-  }
-  .errorMessage{
-    position: absolute;
-    z-index: 100;
-    margin-left: 50%;
-  }
+    .errorMessage {
+        position: absolute;
+        z-index: 100;
+        margin-left: 50%;
+    }
 }
