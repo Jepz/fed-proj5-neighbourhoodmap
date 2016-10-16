@@ -14,12 +14,13 @@
 	</style>
 </head>
 <body>
+	<span class="errorMessage" data-bind="visible: showMessage">Sorry, something went wrong on our side, please try again later.</span>
   <div class="container">
 
-    <span id="errorMessage" class="errorMessage hide">Sorry, something went wrong on our side, please try again later.</span>
+
     <h1>STOCKHOLM BEER WALK</h1>
     <label>Search:
-   <input type="text" id="userInput" data-bind="textInput: search, event: {keyup: filterBasedOnSearch}"></label>
+   	<input type="text" id="userInput" data-bind="textInput: search, event: {keyup: filterBasedOnSearch}"></label>
     <div class="nav">
          <ul class="list" data-bind="foreach: filteredLocations">
           <li class="listItem" data-bind="click: $parent.clickInList">
@@ -36,6 +37,7 @@
 <script type="text/javascript" src="scripts/data.js"></script>
 <script type="text/javascript" src="scripts/settings.js"></script>
 <script src="libs/oauth-signature.min.js"></script>
+<script src="https://use.fontawesome.com/50f9c99c67.js"></script>
 <script type="text/javascript" src="scripts/main.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDk7RC5KA4A3FZIATtkk2CUSiTBxVy09Nw&libraries=drawing,geometry&v=3&callback=initMap" onerror="errorGoogle()"></script>
 

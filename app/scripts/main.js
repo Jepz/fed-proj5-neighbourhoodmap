@@ -12,7 +12,7 @@
   function errorGoogle() {
     'use strict';
     alert('Having problems reaching Google, might the connection be down?');
-  }; 
+  };
 
   function initMap() {
         'use strict';
@@ -31,13 +31,13 @@
   }
 
 var ViewModel = function () {
-  'use strict';
   var self = this;
   infoWindow = new google.maps.InfoWindow();
   // Empty array for adding all locations
   self.locationCollection = [];
   //
   self.filteredLocations = ko.observableArray();
+  self.showMessage = ko.observable(false);
 
   //REF: click event databind knockout - http://knockoutjs.com/documentation/click-binding.html
   self.search = ko.observable("");
@@ -76,7 +76,7 @@ var ViewModel = function () {
     //Add and open the infowindow when click event is triggered
     google.maps.event.addListener(location.marker, 'click', function () {
       //add content to yelp function
-      yelp(location.title,location.location.lat,location.location.lng, location.marker,location.adress);
+      yelp(self.showMessage,location.title,location.location.lat,location.location.lng, location.marker,location.adress);
     });
 
   });
@@ -105,16 +105,11 @@ var ViewModel = function () {
         //Making a comparison between what the user has added and with my list.
           //Change both values to lowercases to make an easier match.
         // The zero in the end is show the full list
-        if (location.title.toLowerCase().indexOf(self.search().toLowerCase()) == 0 ) {
-            location.marker.setVisible(false);
+        if (location.title.toLowerCase().indexOf(self.search().toLowerCase()) >= 0 ) {
+            location.marker.setVisible(true);
             self.filteredLocations.push(location);
         }
     });
-
-    self.filteredLocations().forEach(function (location) {
-      location.marker.setVisible(true);
-    });
-
   };
 };
 
@@ -122,7 +117,7 @@ var ViewModel = function () {
 // YELP API request //
 //////////////////////
 
-var yelp = function(title, latitude, longitude, marker, adress) {
+var yelp = function(showMessage, title, latitude, longitude, marker, adress) {
     'use strict';
 
     var yelpUrl = 'http://api.yelp.com/v2/search';
@@ -153,7 +148,7 @@ var yelp = function(title, latitude, longitude, marker, adress) {
 
     };
 
-    var yelpConsumerSecret = '_kaJ3jISxoLvp1Wx3K553AW-WHM', yelpTokenSecret = 'M4RnfNHqi7zyQwFD-jCnAcuWXUQ';
+    var yelpConsumerSecret = '_kaJ3jISxoLvp1Wx3K553AW-WHM_', yelpTokenSecret = 'M4RnfNHqi7zyQwFD-jCnAcuWXUQ';
 
     var encodedSignature = oauthSignature.generate(httpMethod, yelpUrl, parameters, yelpConsumerSecret, yelpTokenSecret);
     parameters.oauth_signature = encodedSignature;
@@ -169,9 +164,9 @@ var yelp = function(title, latitude, longitude, marker, adress) {
           var content = '<div class="info-window">';
           content += '<h4>' + title + '</h4>';
           if (response.businesses[0].rating_img_url !== undefined) {
-            content += '<p>Score from Yelp</p>'
+            content += '<p>Score from <a class="yelp-link" href="' + response.businesses[0].url + '" target="_blank"><i class="fa fa-yelp"></i>Yelp</a></p>'
             content += '<img class="rating-image" src="' + response.businesses[0].rating_img_url + '"></div>';
-          } else {
+          }else {
             content += '</div>';
           }
 
@@ -180,7 +175,7 @@ var yelp = function(title, latitude, longitude, marker, adress) {
         },
         error: function() {
           // added an elementen in the dom that I show if there is an error.
-          $('#errorMessage').removeClass('hide').addClass('present');
+          showMessage(true);
         }
     };
 
