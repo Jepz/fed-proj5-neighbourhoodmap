@@ -19,9 +19,14 @@
 
 
     <h1>STOCKHOLM BEER WALK</h1>
-    <label>Search:
-   	<input type="text" id="userInput" data-bind="textInput: search, event: {keyup: filterBasedOnSearch}"></label>
-    <div class="nav">
+		<form>
+			<fieldset>
+				<label>Search:<input type="text" id="userInput" data-bind="textInput: search, event: {keyup: filterBasedOnSearch}"></label>
+				<label class="checkbox"><input type="checkbox" data-bind="checked: presentNav">Toggle list</label>
+			</fieldset>
+		</form>
+
+		<div class="nav" data-bind="visible: presentNav">
          <ul class="list" data-bind="foreach: filteredLocations">
           <li class="listItem" data-bind="click: $parent.clickInList">
           	<h3 data-bind="text:title"></h3>

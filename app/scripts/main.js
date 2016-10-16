@@ -38,6 +38,7 @@ var ViewModel = function () {
   //
   self.filteredLocations = ko.observableArray();
   self.showMessage = ko.observable(false);
+  self.presentNav = ko.observable(true);
 
   //REF: click event databind knockout - http://knockoutjs.com/documentation/click-binding.html
   self.search = ko.observable("");
@@ -72,6 +73,7 @@ var ViewModel = function () {
         },1400);
       }
     }
+
 
     //Add and open the infowindow when click event is triggered
     google.maps.event.addListener(location.marker, 'click', function () {
@@ -148,7 +150,7 @@ var yelp = function(showMessage, title, latitude, longitude, marker, adress) {
 
     };
 
-    var yelpConsumerSecret = '_kaJ3jISxoLvp1Wx3K553AW-WHM_', yelpTokenSecret = 'M4RnfNHqi7zyQwFD-jCnAcuWXUQ';
+    var yelpConsumerSecret = '_kaJ3jISxoLvp1Wx3K553AW-WHM', yelpTokenSecret = 'M4RnfNHqi7zyQwFD-jCnAcuWXUQ';
 
     var encodedSignature = oauthSignature.generate(httpMethod, yelpUrl, parameters, yelpConsumerSecret, yelpTokenSecret);
     parameters.oauth_signature = encodedSignature;
