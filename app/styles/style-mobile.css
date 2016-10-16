@@ -79,7 +79,6 @@ table {
     border-spacing:0;
 }
 
-/* change border colour to suit your needs */
 hr {
     display:block;
     height:1px;
@@ -93,8 +92,6 @@ input, select {
     vertical-align:middle;
 }
 
-
-
 html,
 body {
   height: 100%;
@@ -106,7 +103,7 @@ h1{
   text-align: center;
 }
 
-#nav{
+.nav{
   background: #fff;
   height: 100%;
   line-height: 35px;
@@ -144,7 +141,6 @@ input{
 
 }
 
-
 .listItem:hover{
   background-color: #E3F2FD;
 }
@@ -162,16 +158,20 @@ input[type="text"]{
   font-family: Roboto;
   font-weight: bold;
 }
+.errorMessage{
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 20px;
+}
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 760px) {
 
   h1,label{
     background-color: white;
     padding: 10px;
     border-bottom-right-radius: 5px;
   }
-
-
   .listItem {
     font-size: 12px;
   }
@@ -182,7 +182,7 @@ input[type="text"]{
     font-weight: bold;
   }
 
-  #map {
+  .map {
     height: 100%;
     width: 100%;
   }
@@ -194,7 +194,6 @@ input[type="text"]{
     left: 0px;
     width:350px;
     height: 100%;
-
   }
 
   .nav{
@@ -205,30 +204,23 @@ input[type="text"]{
     margin: 0px;
     width: 200px;
     height: auto;
-    display: none;
     border-bottom-right-radius: 5px;
+    opacity: 80;
   }
 }
 .errorMessage{
+  top:50%;
   position: absolute;
-
   z-index: 100;
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: 20px;
-
 }
+
+
 .present{
   left:50%;
   top: 50%;
 }
-.hide{
-  left:-1000px;
-  top:-100px;
-}
 
-@media screen and (min-width: 993px) {
+@media screen and (min-width: 761px) {
 
   label{
     margin-left: 10px;
@@ -237,6 +229,7 @@ input[type="text"]{
   .listItem {
       font-size: 14px;
   }
+
 
   input[type="text"]{
     font-size: 12px;
@@ -262,8 +255,11 @@ input[type="text"]{
 
     margin: 0px;
     height: auto;
-    display: none;
     width: 100%;
-
+  }
+  .errorMessage{
+    position: absolute;
+    z-index: 100;
+    margin-left: 50%;
   }
 }
